@@ -1,31 +1,29 @@
 import java.util.ArrayList;
 
-public class MathOperations extends InputClass{
+
+
+public class MathOperations extends InputClass {
+
+
+
+
     ArrayList<Integer> numbers = new ArrayList<Integer>();
     InputClass inputClass = new InputClass();
+    double result = 0;
 
-
-    double result;
+    public void setNumbers() {
+        this.numbers = inputClass.ask();
+    }
     public void sum1(){
-        double result = 0;
         for (Integer number : numbers) {
             result += number;
         }
-        System.out.println(result);
-
-        }
-    public void extract(){
-
-    }
-    public void divide(){
-
-    }
-    public void multiply(){
-
+        System.out.println("Sum: " + result);
     }
 
+}
 
-    }
+
 
 
 
