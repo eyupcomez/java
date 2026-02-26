@@ -1,20 +1,14 @@
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.*;
 
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-        Connection connection = null;
-        try{
-            DbHelper helper = new DbHelper();
-            connection= helper.getConnection();
-            System.out.println("Connection Successfull!");
-        } catch (SQLException exception){
-            System.out.println(exception.getMessage());
-        }
-
-
-
+        DbManager dbManager = new DbManager();
+        dbManager.insert();
+        dbManager.selectProduct();
 
     }
 }
