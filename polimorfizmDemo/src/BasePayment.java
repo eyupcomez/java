@@ -1,10 +1,18 @@
 public class BasePayment {
 
-    public void accepted(String message){
-        System.out.println("Payment method is accepted: " + message);
+
+    /*protected String className;
+
+    public void setClassName() {
+        this.className = this.getClass().getSimpleName();
+    }*/
+
+    public void accepted(){
+
+        System.out.println("Payment method is accepted: " + getClass().getSimpleName());
     }
-    public void declined(String message){
+    public void declined(){
         System.out.println("Payment method is declined: "
-                + message + " " + "Please try again. ");
+                + getClass().getSimpleName() + " " + "Please try again. ");
     }
 }
