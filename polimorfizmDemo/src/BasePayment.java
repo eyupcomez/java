@@ -1,11 +1,7 @@
 public class BasePayment {
 
 
-    /*protected String className;
 
-    public void setClassName() {
-        this.className = this.getClass().getSimpleName();
-    }*/
 
     public void accepted(){
 

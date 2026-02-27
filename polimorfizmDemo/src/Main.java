@@ -9,6 +9,14 @@ public class Main {
         DbManager dbManager = new DbManager();
         dbManager.insert();
         dbManager.selectProduct();
+        BasePayment payment = new PaymentMethods() {
+            @Override
+            public void cryptoPayment() {
+
+            }
+        };
+
+
 
     }
 }
