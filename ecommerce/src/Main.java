@@ -7,11 +7,13 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         DbManager dbManager = new DbManager();
+        Balance balance= new Balance();
+        balance.deposit();
         dbManager.insert();
         dbManager.selectProduct();
         BasePayment payment = new PaymentMethods() {
             @Override
-            public void cryptoPayment() {
+            public void glnrBalance() {
 
             }
         };
