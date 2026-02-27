@@ -15,11 +15,11 @@ public class DbManager {
             statementSelect = connection.createStatement();
             resultSet = statementSelect.executeQuery("select * from BeautyProducts;");
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
+
                 String name = resultSet.getString("name");
                 double price = resultSet.getDouble("price");
 
-                System.out.println(id + " - " + name + " - " + price);
+                System.out.println(name + " - " + price);
             }
         } catch (SQLException exception) {
             System.out.println(exception.getMessage());
@@ -36,12 +36,12 @@ public class DbManager {
             System.out.println("Connection Successful!");
 
             statement = connection.prepareStatement(
-                    "insert into BeautyProducts (name, price, id) values (?, ?, ?)"
+                    "insert into BeautyProducts (name, price, id) values (?, ?)"
             );
 
             statement.setString(1, "Perfume");
             statement.setDouble(2, 500);
-            statement.setInt(3, 1);
+
 
             int result = statement.executeUpdate();
             System.out.println("Inserted rows: " + result);
