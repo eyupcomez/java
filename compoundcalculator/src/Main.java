@@ -4,6 +4,11 @@ public class Main {
                 VariableInput input = new VariableInput();
                 input.setInvestmentAmount();
                 input.getInvestmentAmount();
+                input.setPeriodProfit();
+                input.setTargetPeriodProfit();
+                System.out.println(input.getInvestmentAmount());
+                ExecutionLoop execute = new ExecutionLoop();
+                execute.executeWhileLoop();
 
         }
 
