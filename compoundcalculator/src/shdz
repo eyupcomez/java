@@ -1,0 +1,34 @@
+public class Context { // The shared object class
+    public String name;
+}
+
+public class ClassA {
+    private final Context context; // Holds a reference to the shared object
+    public ClassA(Context context) {
+        this.context = context;
+    }
+    public void setName(String name) {
+        this.context.name = name; // Modify the shared object's state
+    }
+}
+
+public class ClassB {
+    private final Context context; // Holds a reference to the same shared object
+    public ClassB(Context context) {
+        this.context = context;
+    }
+    public void display() {
+        System.out.println("Name from ClassA: " + this.context.name); // Access the shared state
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Context sharedContext = new Context(); // Create the object once
+        ClassA a = new ClassA(sharedContext); // Pass the reference to ClassA's constructor
+        ClassB b = new ClassB(sharedContext); // Pass the same reference to ClassB's constructor
+
+        a.setName("Alex"); // Change the state through ClassA
+        b.display();       // Read the changed state from ClassB (Output: Name from ClassA: Alex)
+    }
+}

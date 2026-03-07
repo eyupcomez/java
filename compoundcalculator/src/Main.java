@@ -1,5 +1,7 @@
 public class Main {
 
+
+
         public static void main (String[] args){
                 VariableInput input = new VariableInput();
                 input.setInvestmentAmount();
@@ -7,7 +9,7 @@ public class Main {
                 input.setPeriodProfit();
                 input.setTargetPeriodProfit();
                 System.out.println(input.getInvestmentAmount());
-                ExecutionLoop execute = new ExecutionLoop();
+                ExecutionLoop execute = new ExecutionLoop(input);
                 execute.executeWhileLoop();
 
         }
