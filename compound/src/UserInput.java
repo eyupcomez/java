@@ -2,17 +2,18 @@ import java.util.Scanner;
 
 public class UserInput {
     Scanner scanner = new Scanner(System.in);
-    private double investmentAmount;
+    private double investmentSize;
     private double profitAmount;
     private double partitionPercentage;
+    private int investmentNumbers;
     private String periodName;
 
-    public void setInvestmentAmount(){
+    public void setInvestmentSize(){
         System.out.println("Please enter the amount of your first investment: ");
-        this.investmentAmount = scanner.nextDouble();
+        this.investmentSize = scanner.nextDouble();
     }
-    public double getInvestmentAmount(){
-        return investmentAmount;
+    public double getInvestmentSize(){
+        return investmentSize;
     }
     public void setProfitAmount(){
         System.out.println("Please enter the profit amount you are expecting: ");
@@ -36,5 +37,14 @@ public class UserInput {
     }
     public String getPeriodName(){
         return periodName;
+    }
+
+    public void setInvestmentNumbers() {
+        System.out.println("Please enter the number of investments you want to reach: ");
+        this.investmentNumbers = scanner.nextInt();
+    }
+
+    public int getInvestmentNumbers() {
+        return investmentNumbers;
     }
 }
