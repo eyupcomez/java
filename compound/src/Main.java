@@ -8,9 +8,9 @@ public class Main {
                 input.getInvestmentAmount();
                 input.setPeriodProfit();
                 input.setTargetPeriodProfit();
-                System.out.println(input.getInvestmentAmount());
-                ExecutionLoop execute = new ExecutionLoop(input);
-                execute.executeWhileLoop();
+
+                Execution execute = new Execution(input);
+                execute.execute();
 
         }
 
